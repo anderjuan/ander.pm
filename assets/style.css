@@ -10,33 +10,53 @@ html,body {
 h1 {
     font-size: 1.75rem;
     font-weight: 300;
+    margin: 0;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin: 0;
 }
 a {
     text-decoration: none;
-}
-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 3;
-    height: 100vh;
+    color: #000000;
 }
 navbar {
+    position: sticky;
+    top: 0;
     padding: 36px;
+    background-color: #ededed;
     display: flex;
     align-items: center;
     font-size: 1.75rem;
 }
-navbar > svg {
+navbar > a:first-child {
     padding-right: 24px;
 }
-.content {
+.container {
     padding-left: 120px;
     padding-right: 24px;
     max-width: 550px;
 }
+.section {
+    min-height: 90vh;
+}
+.btn {
+    display: flex;
+    align-items: center;
+}
+.btn > svg {
+    padding-left: 6px;
+    transition: padding-left 300ms ease-in-out;
+}
+.btn:hover > svg {
+    padding-left: 12px;
+    transition: padding-left 300ms ease-in-out;
+}
 footer {
-    padding: 36px;
+    position: fixed;
+    right: 36px;
+    bottom: 36px;
     display: flex;
     flex-direction: row;
     align-self: flex-end;
